@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Raleway');
+html {
+    height: 100%;
+}
+
+body {
+    height: 90%;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+.loging {
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.85;
+    background: white;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulosForm {
+    font-family: Raleway;
+    font-size: 20px;
+    color: #2800ab;
+}
+
+.cabecera {
+    font-family: Amatic SC;
+    background-color: transparent;
+    font-size: 200px;
+    padding: 30px;
+}
+
+.formIndex {
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+.boton {
+    opacity: 1;
+}
