@@ -4,57 +4,83 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="controller.js"></script>
 
     <title>Gestor Tiempos</title>
-    <script>
-
-        function redireccionar() {
-            var user = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            if ((user == "maria") && (password == "1234")) {
-               // var url = "prueba.html";
-                //$(location).attr('href', url);
-            } else {
-                alert("Nombre o contraseña incorrectas");
-            }
-        }
-        function enter(e) {
-            var tecla = (document.all) ? e.keyCode : e.which;
-            if (tecla == 13) {
-                redireccionar();
-            }
-        }
-    </script>
 </head>
-<!-- Mirar grids en WWSchool-->
 
 <body>
-    <div class="cabecera">
-        GESTOR DE TIEMPOS
-    </div>
-    <br>
-    <div class="loging">
-        <form class="formIndex">
-            <p class="titulosForm">
-                <b>User Name</b>
-            </p>
-            <input id="username" onkeypress="enter(event)" style="width: 100%" type="text" name="username" placeholder="User Name">
+    <div calss="container-fluid">
+        <div class="row">
+            <div class="header col-md-9">
+                GESTOR DE TIEMPOS
+            </div>
             <br>
-            <br>
-            <p>
-                <b class="titulosForm"> Password</b>
-            </p>
-            <input id="password" onkeypress="enter(event)" style="width: 100%" type="password" name="password" placeholder="Password">
-            <br>
-            <br>
-            <input style="width: 45%" onclick="redireccionar()" type="button" class="btn btn-success" value="Entrar">
-            <input style="width: 52%" onclick="redireccionar()" type="button" class="btn btn-danger" value="Registrarse">
+            <div id="login" class="loging col-md-3">
+                <div calss="container-fluid">
+                    <div class="row">
+                        <p class="col-md-12 formtitle text-center">¿Cómo deseas entrar?</p>
+                        <div class="col-md-12">
+                            <div calss="container-fluid">
+                                <div class="row" style="width:100px; margin:auto">
+                                    <button type="button" class="btn btn-info col-md-12 buttonindex" onclick="loginindex('teacher')">Docente</button>
+                                    <button type="button" class="btn btn-info col-md-12 buttonindex" onclick="loginindex('student')">Estudiante</button>
+                                    <button type="button" class="btn btn-info col-md-12 buttonindex" onclick="loginindex('visitor')">Visitante</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div style="display: none" id="loginStudent" class="loging col-md-3">
+                <form class="formIndex">
+                    <p class="formtitle">
+                        <b>User Name</b>
+                    </p>
+                    <input id="username" onkeypress="enter(event)" style="width: 100%" type="text" name="username" placeholder="User Name">
+                    <br>
+                    <br>
+                    <p>
+                        <b class="formtitle"> Password</b>
+                    </p>
+                    <input id="password" onkeypress="enter(event)" style="width: 100%" type="password" name="password" placeholder="Password">
+                    <br>
+                    <br>
+                    <input style="width: 45%" onclick="accesscontrol()" type="button" class="btn btn-success" value="Login">
+                    <input style="width: 52%" onclick="accesscontrol()" type="button" class="btn btn-danger" value="New Account">
+                </form>
+            </div>
+            <div style="display: none" id="loginTeacher" class="loging col-md-3">
+                <form class="formIndex">
+                    <p class="formtitle">
+                        <b>User Name</b>
+                    </p>
+                    <input id="username" onkeypress="enter(event)" style="width: 100%" type="text" name="username" placeholder="User Name">
+                    <br>
+                    <br>
+                    <p>
+                        <b class="formtitle"> Password</b>
+                    </p>
+                    <input id="password" onkeypress="enter(event)" style="width: 100%" type="password" name="password" placeholder="Password">
+                    <br>
+                    <br>
+                    <input style="width: 45%" onclick="accesscontrol()" type="button" class="btn btn-success" value="Login">
+                    <input style="width: 52%" onclick="accesscontrol()" type="button" class="btn btn-danger" value="New Account">
+                </form>
+            </div>
+        </div>
+
     </div>
 
 

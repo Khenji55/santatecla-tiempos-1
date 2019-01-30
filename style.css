@@ -5,38 +5,36 @@ html {
 
 body {
     height: 90%;
+    background-image: url("pics/background.jpg");
     /*IMPORTANTE*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
-  }
+
 .loging {
     padding: 20px;
     border-radius: 10px;
     opacity: 0.85;
     background: white;
     width: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.titulosForm {
+.formtitle {
+    font-weight: bold;    
     font-family: Raleway;
     font-size: 20px;
     color: #2800ab;
 }
 
-.cabecera {
+.header {
     font-family: Amatic SC;
     background-color: transparent;
-    font-size: 200px;
-    padding: 30px;
+    font-size: 160px;
 }
 
 .formIndex {
@@ -46,4 +44,7 @@ footer {
 }
 .boton {
     opacity: 1;
+}
+.buttonindex{
+    margin: 2px;
 }
