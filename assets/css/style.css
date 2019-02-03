@@ -5,7 +5,7 @@ html {
 
 body {
     height: 90%;
-    background-image: url("pics/background.jpg");
+    background-image: url("../img/background.jpg");
     /*IMPORTANTE*/
     display: flex;
     justify-content: center;
